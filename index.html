@@ -8,17 +8,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="./src/style.css">
   </head>
-  <body class="h-screen flex flex-col justify-center align-center items-center system-ui sans-serif">
+  <body class="h-screen flex flex-col justify-center align-center items-center system-ui sans-serif bg-bg-100">
  <main class="p-5 max-w-105 ">
 <div class="bg-bg-200 p-[36px] rounded-[16px] shadoww"> 
 <h1 class="text-text-100 text-[23px] mb-[28px] font-bold">Payment Details</h1>
-<form >
+<form id="form">
   <!-- card number -->
 <div>
 <label for="cardnumber" class="text-[14px] mb-[8px] text-text-100 font-bold">Card Number</label>
 <div class="flex pt-[12px] pb-[12px] gap-3 rounded-[10px] w-[100%] focus">
 <i class="fa-regular fa-credit-card text-text-300 text-[18px]"></i>
-<input type="text" id="cardnumber" placeholder="1234 5678 8901 1234" maxlength="19" autocomplete="off" class="text-text-300 outline-none">
+<input id="cartnumber" type="text" id="cardnumber" placeholder="1234 5678 8901 1234" maxlength="19" autocomplete="off" class="text-text-300">
 </div>
 </div>
 <!-- expry and cvv -->
@@ -26,31 +26,31 @@
 <!-- Expiry Date -->
 <div class="flex flex-col ">
   <label for="expiry" class="text-[14px] mb-[8px] text-text-100 font-bold">Expiry Date</label>
-  <input type="text" id="expiry" placeholder="MM / YY" maxlength="7" autocomplete="off" class="text-text-300 outline-none">
+  <input id="expiry" type="text" id="expiry" placeholder="MM / YY" maxlength="7" autocomplete="off" class="text-text-300 ">
 </div>
 <!-- CVV -->
 <div class="flex flex-col">
 <label for="cvv" class="text-[14px] mb-[8px] text-text-100 font-bold">CVV</label>
-<input type="text" id="cvv" placeholder="123" maxlength="4" autocomplete="off" class="text-text-300 outline-none">
+<input id="cvv" type="text" id="cvv" placeholder="123" maxlength="4" autocomplete="off" class="text-text-300 ">
 </div>
 </div>
 <!-- Cardholder Name -->
 <div class="flex flex-col mt-[20px]">
 <label for="name" class="text-[14px] mb-[8px] text-text-100 font-bold">Cardholder Name</label>
-<input type="text" id="name" placeholder="John Doe" autocomplete="off" class="text-text-300 outline-none">
+<input type="text" id="name" placeholder="John Doe" autocomplete="off" class="text-text-300 ">
 </div>
 <!-- btn -->
-<button type="submit" class="p-[14px] text-[14px] text-text-200 bg-text-100 border-none w-[100%] cursor-pointer rounded-[10px] mt-[20px] hover:bg-[#333] text-[16px] font-bold">Pay Now</button>
+<button id="pay-btn" type="submit" class="p-[14px] text-[14px] text-text-200 bg-text-100 border-none w-[100%] cursor-pointer rounded-[10px] mt-[20px] hover:bg-[#333] text-[16px] font-bold">Pay Now</button>
 </form>
 </div>
  </main>
 <!-- success model -->
- <div class="fixed hidden top-0 left-0 w-[100%] h-[100%] flex justify-center items-center bg-bg-400 opacity-[1]">
+ <div id="successModal" class="fixed hidden top-0 left-0 w-[100%] h-[100%] flex justify-center items-center bg-bg-400 opacity-[1]">
 <div class="bg-bg-200 p-[40px] rounded-[16px] max-w-[320px] w-[90%] flex flex-col justify-center items-center">
 <div class="w-[60px] h-[60px] bg-bg-300 text-text-200 rounded-[50%] text-[28px] mb-[20px] flex justify-center items-center">✓</div>
 <h3 class="text-[20px] mb-[8px] font-bold">Payment Successul!</h3>
 <p class="text-text-400 text-[15px]">Your payment has been processed.</p>
-<button class="bg-text-100 font-bold cursor-pointer mt-[20px] text-white w-[118px] h-[42px] rounded-[10px] hover:bg-[#333]">Done</button>
+<button id="close-btn" class="bg-text-100 font-bold cursor-pointer mt-[20px] text-white w-[118px] h-[42px] rounded-[10px] hover:bg-[#333]">Done</button>
 </div>
 </div>
     <script type="module" src="/src/main.js"></script>
