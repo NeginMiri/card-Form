@@ -16,28 +16,28 @@
   <!-- card number -->
 <div>
 <label for="cardnumber" class="text-[14px] mb-[8px] text-text-100 font-bold">Card Number</label>
-<div class="flex pt-[12px] pb-[12px] gap-3 rounded-[10px] w-[100%] focus">
+<div class="border-2 border-[#e5e5e5] flex p-1.5 items-center rounded-[7px]">
 <i class="fa-regular fa-credit-card text-text-300 text-[18px]"></i>
-<input id="cartnumber" type="text"  placeholder="1234 5678 8901 1234" maxlength="19" autocomplete="off" class="text-text-300">
+<input id="cartnumber" type="text"  placeholder="1234 5678 8901 1234" maxlength="19" autocomplete="off" class="text-text-300 px-3.5 rounded-[6px]">
 </div>
 </div>
 <!-- expry and cvv -->
-<div class="flex mt-[15px]">
+<div class="flex mt-[15px] gap-6">
 <!-- Expiry Date -->
 <div class="flex flex-col ">
   <label for="expiry" class="text-[14px] mb-[8px] text-text-100 font-bold">Expiry Date</label>
-  <input id="expiry" type="text" id="expiry" placeholder="MM / YY" maxlength="7" autocomplete="off" class="text-text-300 ">
+  <input id="expiry" type="text" id="expiry" placeholder="MM / YY" maxlength="7" autocomplete="off" class="text-text-300 w-[146px] h-[46px] border-2 p-3 border-[#e5e5e5] rounded-2xl">
 </div>
 <!-- CVV -->
 <div class="flex flex-col">
 <label for="cvv" class="text-[14px] mb-[8px] text-text-100 font-bold">CVV</label>
-<input id="cvv" type="text" id="cvv" placeholder="123" maxlength="4" autocomplete="off" class="text-text-300 ">
+<input id="cvv" type="text" id="cvv" placeholder="123" maxlength="4" autocomplete="off" class="text-text-300 w-[146px] h-[46px] border-2 p-3 border-[#e5e5e5] rounded-2xl">
 </div>
 </div>
 <!-- Cardholder Name -->
 <div class="flex flex-col mt-[20px]">
 <label for="name" class="text-[14px] mb-[8px] text-text-100 font-bold">Cardholder Name</label>
-<input type="text" id="name" placeholder="John Doe" autocomplete="off" class="text-text-300 ">
+<input type="text" id="name" placeholder="John Doe" autocomplete="off" class="text-text-300 w-[308px] h-[46px] border-2 p-3 border-[#e5e5e5] rounded-2xl">
 </div>
 <!-- btn -->
 <button id="pay-btn" type="submit" class="p-[14px] text-[14px] text-text-200 bg-text-100 border-none w-[100%] cursor-pointer rounded-[10px] mt-[20px] hover:bg-[#333] text-[16px] font-bold">Pay Now</button>
@@ -45,7 +45,7 @@
 </div>
  </main>
 <!-- success model -->
- <div id="successModal" class="fixed hidden top-0 left-0 w-[100%] h-[100%] flex justify-center items-center bg-bg-400 opacity-[1]">
+ <div id="successModal" class="fixed top-1/2 left-1/2 -translate-1/2 flex w-[100%] h-[100%] justify-center items-center bg-bg-400 opacity-[1]">
 <div class="bg-bg-200 p-[40px] rounded-[16px] max-w-[320px] w-[90%] flex flex-col justify-center items-center">
 <div class="w-[60px] h-[60px] bg-bg-300 text-text-200 rounded-[50%] text-[28px] mb-[20px] flex justify-center items-center">✓</div>
 <h3 class="text-[20px] mb-[8px] font-bold">Payment Successul!</h3>

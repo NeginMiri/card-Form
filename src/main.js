@@ -1,9 +1,16 @@
 import "./style.css";
-const formEl = document.getElementById("form");
-const cardNumberEl = document.getElementById("cartnumber");
-const expiryEl = document.getElementById("expiry");
-const cvvEl = document.getElementById("cvv");
-const nameEl = document.getElementById("name");
+
 const successModalEl = document.getElementById("successModal");
 const closeBtnEl = document.getElementById("close-btn");
+const PaybtnEl = document.getElementById("pay-btn");
 
+
+PaybtnEl.addEventListener("click", () => {
+  successModalEl.classList.toggle("!flex");
+  successModalEl.classList.remove("!hidden");
+});
+
+closeBtnEl.addEventListener("click", () => {
+  successModalEl.classList.add("!hidden");
+  successModalEl.classList.remove("!flex");
+});
